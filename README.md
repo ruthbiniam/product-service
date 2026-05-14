@@ -1,4 +1,6 @@
 # product-service
+# CI BADGE
+[![CI](https://github.com/ruthbiniam/product-service/actions/workflows/ci.yml/badge.svg)](https://github.com/ruthbiniam/product-service/actions/workflows/ci.yml)
 
 A RESTful Product Service built with Spring Boot 3.
 
