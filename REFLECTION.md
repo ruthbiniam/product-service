@@ -1,1 +1,9 @@
+ Reflection Questions Answers
+1.	In my opinion, the ProductRequest DTO should have @Valid because it is the object that receives data from the user. so that, the input is checked before it goes into the rest of the program. I would not put those validation rules directly on the Product entity because the entity should stay focused on the database data.
+2.	The Location header in a 201 Created response is used to show the client where the new resource was created. It gives the URL of the new item. This is required by the HTTP standard for created responses, so the client knows how to find the resource later.
+3.	@ExceptionHandler is used to handle one specific exception, while @ControllerAdvice is used to handle exceptions globally for the whole application. I would use @ExceptionHandler when I only need to handle one error in one controller, and @ControllerAdvice when I want one place to handle errors for many controllers.
+4.	If I removed @Transactional from the MockMvc tests, the data created in one test might stay in the database after that test finishes. That could affect the next test and make the results unreliable. so using @Transactional, each test is rolled back, so the tests stay clean and separate.
+5.	RFC 9457 is a standard for returning error messages from APIs in a clear and organized format. It is better than just sending something like { error: "something went wrong" } because it gives more useful details and makes the API easier to understand and debug.
+6.	A MockMvc test is like an integration test because it checks how the controller and web layer work together. A Mockito test is a unit test because it tests one class alone by mocking the other parts. I would use MockMvc when I want to test the full request and response flow, and Mockito when I want to test the logic inside one class.
+
 
